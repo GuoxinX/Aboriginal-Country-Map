@@ -1,0 +1,32 @@
+{
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
+  "dependencies": {
+    "@material-ui/core": "^3.2.0",
+    "bluebird": "^3.5.1",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "concurrently": "^3.5.1",
+    "cryptr": "^4.0.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.2",
+    "mocha": "^5.2.0",
+    "mockgoose": "^7.3.5",
+    "mongoose": "^5.2.7",
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0"
+  },
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "govclient-install": "cd govclient && npm install",
+    "client": "cd client && npm start",
+    "govclient": "cd govclient && npm start",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "dev-linux": "concurrently --kill-others-on-fail \"npm run server\" \"PORT=3000 npm run client\" \"PORT=3001 npm run govclient\"",
+    "dev-windows": "concurrently --kill-others-on-fail \"npm run server\" \"set PORT=3000 && npm run client\" \"set PORT=3001 && npm run govclient\"",
+    "test-linux": "export NODE_ENV=test && mocha --timeout 10000",
+    "test-windows": "set NODE_ENV=test && mocha --timeout 10000",
+    "govclient-test": "cd govclient && npm run test"
+  }
+}

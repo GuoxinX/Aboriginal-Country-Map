@@ -1,0 +1,43 @@
+{
+  "name": "ab-bilby",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^2.3.0",
+    "@material-ui/core": "^3.0.1",
+    "@material-ui/icons": "^3.0.1",
+    "ajv": "^6.5.2",
+    "axios": "^0.18.0",
+    "geojson": "^0.5.0",
+    "mapbox-gl": "^0.47.0",
+    "material-ui": "^0.20.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-form-material-ui": "^4.3.4",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "typeface-roboto": "0.0.54"
+  },
+  "proxy": "http://localhost:5000/",
+  "devDependencies": {
+    "husky": "^1.0.0-rc.13",
+    "prettier": "1.14.0",
+    "pretty-quick": "^1.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
